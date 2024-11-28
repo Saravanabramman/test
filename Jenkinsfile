@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    // stages {
-    //     stage('Clone Repository') {
-    //         steps {
-    //             // Clone the GitHub repository containing your ZIP file
-    //             git branch: 'main', url: 'https://github.com/Saravanabramman/test.git'
-    //         }
-    //     }
+    stages {
+        stage('Clone Repository') {
+            steps {
+                // Clone the GitHub repository containing your ZIP file
+                git branch: 'main', url: 'https://github.com/Saravanabramman/test.git'
+            }
+        }
 
         // stage('Unzip Files') {
         //     steps {
