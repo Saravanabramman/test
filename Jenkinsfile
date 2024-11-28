@@ -12,7 +12,7 @@ pipeline {
         stage('Run Test File') {
             steps {
                 // Run the test file
-                sh 'python /test.py'
+                sh 'python test.py'
             }
         }
     }
