@@ -9,16 +9,6 @@ pipeline {
             }
         }
 
-        // stage('Unzip Files') {
-        //     steps {
-        //         script {
-        //             // Unzip the downloaded ZIP file into the workspace
-        //             sh 'unzip test.zip -d ./unzipped_folder'
-        //         }
-        //     }
-        // }
-
-
         stage('Run Test File') {
             steps {
                 // Run the test file
