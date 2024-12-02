@@ -1,28 +1,10 @@
 pipeline {
     agent any
-
     stages {
-        stage('Clone Repository') {
+        stage('Run Python Script') {
             steps {
-                // Clone the GitHub repository containing your ZIP file
-                git branch: 'main', url: 'https://github.com/Saravanabramman/test.git'
+                bat 'python test/test.py'
             }
-        }
-
-        stage('Run Test File') {
-            steps {
-                // Run the test file
-                sh 'python test/test.py'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-        failure {
-            echo 'Pipeline failed. Check logs for details.'
         }
     }
 }
